@@ -1,7 +1,5 @@
 <script lang="ts">
-    import type { LayoutData } from './$types';
     
-    export let data: LayoutData;
 </script>
 <div class="vh-100">
     <nav class="navbar navbar-expand-lg navbar-light bg-light col sticky-top justify-content-start align-items-center">

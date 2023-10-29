@@ -8,7 +8,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"postbuild": "npx svelte-sitemap --domain https://svelte.ksylthings.dev --out-dir ./docs"
+		"postbuild": "npx svelte-sitemap --domain https://ksylthings.dev --out-dir ./docs"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",

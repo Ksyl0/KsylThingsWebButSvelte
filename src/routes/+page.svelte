@@ -3,6 +3,7 @@
 </svelte:head>
 <script lang="ts">
 import { onMount } from "svelte";
+import { fade } from "svelte/transition";
 
 let timeSpent:number = 0;
 let randInt:number = getRndInteger(15,40);
@@ -62,6 +63,6 @@ function calcTimeSinceLastStream(lastStream:Date){
 <h1>Kiedyś tu coś zrobie</h1>
 <h1>Na serio</h1>
 {#if timeSpent >= randInt}
-<h2>Od ostatniego streama <a href="https://twitch.tv/Ksyl_" target="_blank">tutaj</a> minęły:</h2>
-<h3>Lata: { countdown.years } Miesiące: { countdown.months } Tygodnie: { countdown.weeks } Dni: { countdown.days } Godziny: { countdown.hours } Minuty: { countdown.minutes } Sekundy: { countdown.seconds }</h3>
+<h2 transition:fade>Od ostatniego streama <a href="https://twitch.tv/Ksyl_" target="_blank">tutaj</a> minęły:</h2>
+<h3 transition:fade>Lata: { countdown.years } Miesiące: { countdown.months } Tygodnie: { countdown.weeks } Dni: { countdown.days } Godziny: { countdown.hours } Minuty: { countdown.minutes } Sekundy: { countdown.seconds }</h3>
 {/if}

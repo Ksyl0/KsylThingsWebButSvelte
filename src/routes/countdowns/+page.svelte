@@ -33,6 +33,10 @@
         timer = setInterval(() => {
            timer = calcTimeUntil(date);
         },1000)
+        
+        return(() => {
+            clearInterval(timer);
+        });
     })
     
     let timer: any = calcTimeUntil(date);

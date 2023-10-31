@@ -5,7 +5,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light col sticky-top justify-content-start align-items-center">
         <a class="mx-1 px-2 btn btn-secondary navbar" href="/">Dom</a>
         <a class="mx-1 px-2 btn btn-secondary navbar" href="/plans" >Plany</a>
-        <a class="mx-1 px-2 btn btn-secondary navbar" href='/countdowns'>Odliczania</a>        
+        <a class="mx-1 px-2 btn btn-secondary navbar" href='/countdowns' data-sveltekit-preload-data>Odliczania</a>        
         <a class="mx-1 px-2 btn btn-secondary navbar" href="https://lista.ksylthings.dev">Lista Rimworld TTK</a>
     </nav>
     

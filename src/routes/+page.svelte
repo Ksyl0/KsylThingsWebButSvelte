@@ -2,18 +2,17 @@
     <title>Ksylowa Witryna Testowa</title>
 </svelte:head>
 <script lang="ts">
-import { onMount } from "svelte";
+import { onDestroy, onMount } from "svelte";
 import { fade } from "svelte/transition";
 
 let timeSpent:number = 0;
 let randInt:number = getRndInteger(15,40);
 let data:Date = new Date('2023-07-11T17:00:00');
 let countdown: any;
+let interval: any;
 
-onMount(() => {
-    console.log(randInt);
-    
-    const interval = setInterval(() => {
+onMount(() => {  
+    interval = setInterval(() => {
         if(timeSpent<=randInt){
             timeSpent++;
         }
@@ -23,6 +22,10 @@ onMount(() => {
     return(()=>{
         clearInterval(interval);
     })
+});
+
+onDestroy(() => {
+    clearInterval(interval);
 });
 
 function getRndInteger(min: number, max: number) {

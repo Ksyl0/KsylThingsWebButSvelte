@@ -1,10 +1,9 @@
 <script lang="ts">
-    import { onMount } from "svelte";
+    import { onDestroy, onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
 
     let date: Date = new Date('2024-01-09')
     function calcTimeUntil(date: Date){
-        let countdown: any;
         const now = new Date();
         const difference = date.getTime() - now.getTime();
 
@@ -18,7 +17,7 @@
         const weeks = Math.floor(days / 7);
         days -= weeks * 7
 
-        countdown = {
+        let countdown = {
         months: months,
         weeks: weeks,
         days: days,
@@ -29,17 +28,21 @@
         }
         return countdown;
     }
+    let timer: any = calcTimeUntil(date);
     onMount(() => {
+        timer = calcTimeUntil(date);
+
         timer = setInterval(() => {
            timer = calcTimeUntil(date);
         },1000)
         
-        return(() => {
-            clearInterval(timer);
-        });
+        return;
+    })
+
+    onDestroy(() => {
+        clearInterval(timer);
     })
     
-    let timer: any = calcTimeUntil(date);
 </script>
 <svelte:head>
     <title>Odliczania</title>

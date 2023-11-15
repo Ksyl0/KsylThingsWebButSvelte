@@ -2,7 +2,7 @@
     import { onDestroy, onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
 
-    let date: Date = new Date('2024-01-09')
+    let date: Date = new Date('2024-01-10')
     function calcTimeUntil(date: Date){
         const now = new Date();
         const difference = date.getTime() - now.getTime();

@@ -14,11 +14,11 @@
             <div class="col-lg-2 col-0 bg-dark">
                 
             </div>
-            <div class="col-lg-8 col-12 vstack d-flex align-items-center justify-content-center h-100" style="overflow: hidden">
+            <div class="col-lg-8 col-12 vstack d-flex align-items-center justify-content-center h-100">
                 <slot></slot>
             </div>
             <div class="col-lg-2 col-0 bg-dark">
-                
+
             </div>
         </div>
     </div>

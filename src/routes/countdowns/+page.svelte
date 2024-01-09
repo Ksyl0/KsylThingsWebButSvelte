@@ -39,10 +39,12 @@
     [
       "Pozostały czas do egzaminu zawodowego teoretycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 09:00)!",
+      "Egzamin teoretyczny finished",
     ],
     [
       "Pozostały czas do egzaminu zawodowego praktycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 11:00)!",
+      "Egzamin praktyczny finished",
     ],
   ];
   onMount(() => {
@@ -81,7 +83,9 @@
       Miesiące: {timero.months} Tygodnie: {timero.weeks} Dni: {timero.days} Godziny:
       {timero.hours} Minuty: {timero.minutes} Sekundy : {timero.seconds}
     </h2>
-  {:else}
+  {:else if timero.difference < 1000 * 60 * 60 * 3}
     <h2 in:fade>{messages[i][1]}</h2>
+  {:else}
+    <h2 in:fade>{messages[i][2]}</h2>
   {/if}
 {/each}

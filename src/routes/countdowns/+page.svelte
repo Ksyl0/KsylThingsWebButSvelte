@@ -39,7 +39,7 @@
     [
       "Pozostały czas do egzaminu zawodowego teoretycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 09:00)!",
-      "Egzamin teoretyczny finished, chuj wie co z wynikami bo OKE zjebało i złe klucze odpowiedzi wysłało xDDD",
+      "Egzamin teoretyczny finished, cholera wie co z wynikami bo OKE zjebało i złe klucze odpowiedzi wysłało xDDD",
     ],
     [
       "Pozostały czas do egzaminu zawodowego praktycznego sesja styczeń",

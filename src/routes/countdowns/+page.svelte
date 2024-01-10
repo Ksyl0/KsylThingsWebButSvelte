@@ -39,7 +39,7 @@
     [
       "Pozostały czas do egzaminu zawodowego teoretycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 09:00)!",
-      "Egzamin teoretyczny finished, cholera wie co z wynikami bo OKE zjebało i złe klucze odpowiedzi wysłało xDDD",
+      "Egzamin teoretyczny finished, cholera wie co z wynikami bo OKE zwaliło i złe klucze odpowiedzi wysłało xDDD",
     ],
     [
       "Pozostały czas do egzaminu zawodowego praktycznego sesja styczeń",
@@ -83,7 +83,7 @@
       Miesiące: {timero.months} Tygodnie: {timero.weeks} Dni: {timero.days} Godziny:
       {timero.hours} Minuty: {timero.minutes} Sekundy : {timero.seconds}
     </h2>
-  {:else if timero.difference < 1000 * 60 * 60 * 3}
+  {:else if timero.difference < 1000 * 60 * 60 * 3 && timero.difference > -((1000 * 60 * 60 * 3) + (1000 * 60 * 10)) }
     <h2 in:fade>{messages[i][1]}</h2>
   {:else}
     <h2 in:fade>{messages[i][2]}</h2>

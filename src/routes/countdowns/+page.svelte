@@ -39,7 +39,7 @@
     [
       "Pozostały czas do egzaminu zawodowego teoretycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 09:00)!",
-      "Egzamin teoretyczny finished, cholera wie co z wynikami bo CKE zwaliło i złe klucze odpowiedzi wysłało xDDD",
+      "Egzamin teoretyczny finished, cholera wie co z wynikami bo <a href='https://cke.gov.pl/informacja-w-sprawie-czesci-pisemnej-egzaminu-zawodowego-wyswietlanie-wstepnego-wyniku' target='_blank'/>CKE</a> zwaliło i złe klucze odpowiedzi wysłało xDDD",
     ],
     [
       "Pozostały czas do egzaminu zawodowego praktycznego sesja styczeń",
@@ -86,6 +86,6 @@
   {:else if timero.difference < 1000 * 60 * 60 * 3 && timero.difference > -((1000 * 60 * 60 * 3) + (1000 * 60 * 10)) }
     <h2 in:fade>{messages[i][1]}</h2>
   {:else}
-    <h2 in:fade>{messages[i][2]}</h2>
+    <h2 in:fade>{@html messages[i][2]}</h2>
   {/if}
 {/each}

@@ -2,6 +2,43 @@
   import { onDestroy, onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
 
+  class Countdown {
+    date: Date;
+
+    constructor(date: Date) {
+        this.date = date;
+    }
+
+    calcTimeUntil() {
+    const now = new Date();
+    const difference = this.date.getTime() - now.getTime();
+
+    let days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    const months = Math.floor(days / 30);
+    days -= months * 30;
+    const weeks = Math.floor(days / 7);
+    days -= weeks * 7;
+
+    let countdown = {
+      months: months,
+      weeks: weeks,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+      difference: difference,
+    };
+    return countdown;
+  }
+  
+  }
+
   let date: Date = new Date("2024-01-10T08:00:00");
   let date2: Date = new Date("2024-01-18T08:00:00");
   function calcTimeUntil(date: Date) {
@@ -44,7 +81,7 @@
     [
       "Pozostały czas do egzaminu zawodowego praktycznego sesja styczeń",
       "Aktualnie pisze egzamin(albo jestem już po nim jak jest po 11:00)!",
-      "Egzamin praktyczny finished",
+      "Egzamin praktyczny finished, jestem na 99% pewny że zdany",
     ],
   ];
   onMount(() => {
